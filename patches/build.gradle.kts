@@ -1,13 +1,19 @@
-group = "app.morphe"
+group = "app.mix"
 
 patches {
     about {
-        name = "Morphe Patches template"
-        description = "Patches template for Morphe"
-        source = "git@github.com:MorpheApp/morphe-patches-template.git"
-        author = "Morphe"
-        contact = "contact@morphe.software"
-        website = "https://morphe.software"
+        name = "Mix Patches"
+        description = "Mix Patches for Morphe"
+        source = "git@github.com:IMXEren/mix-patches.git"
+        author = "IMXEren"
+        contact = "vickrey_readings@simplelogin.com"
+        website = "https://github.com/IMXEren/mix-patches"
         license = "Additional conditions under GPL section 7 apply: attribution and project name restrictions. See LICENSE file."
+    }
+}
+
+kotlin {
+    compilerOptions {
+        freeCompilerArgs = listOf("-Xcontext-receivers")
     }
 }
