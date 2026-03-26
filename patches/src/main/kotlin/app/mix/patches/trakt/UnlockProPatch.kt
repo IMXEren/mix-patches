@@ -6,6 +6,7 @@ import app.morphe.patcher.patch.bytecodePatch
 @Suppress("unused")
 val unlockProPatch = bytecodePatch(
     name = "Unlock pro",
+    description = "Remove ads, add VIP badge and allow to view 'Your Month in Review'."
 ) {
     compatibleWith("tv.trakt.trakt"("2.2.1"))
 
