@@ -1,29 +1,35 @@
 package app.mix.patches.trakt
 
+import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.Match
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
+import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
 @Suppress("unused")
 val unlockProPatch = bytecodePatch(
     name = "Unlock pro",
-    description = "Remove ads, add VIP badge and allow to view 'Your Month in Review'."
+    description = "Remove ads, add VIP badge and allow to view 'Your Month in Review'.",
 ) {
-    compatibleWith("tv.trakt.trakt"("2.2.1"))
+    compatibleWith("tv.trakt.trakt"("3.4.1"))
 
     execute {
-        arrayOf(isVIPFingerprint, isVIPEPFingerprint).onEach { fingerprint ->
-            // Resolve both fingerprints on the same class.
-            fingerprint.match(remoteUserFingerprint.originalClassDef)
-        }.forEach { fingerprint ->
-            // Return true for both VIP check methods.
+        // Set the User members isVip, isVipEp, isVipOg as true
+        val setTrueForVipInstruction = { match: Match.InstructionMatch, fingerprint: Fingerprint ->
+            var instruction = match.getInstruction<TwoRegisterInstruction>()
             fingerprint.method.addInstructions(
-                0,
+                match.index,
                 """
-                    const/4 v0, 0x1
-                    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-                    move-result-object v1
-                    return-object v1
-                """,
+                    const/4 v${instruction.registerA}, 0x1
+                """
+            )
+        }
+
+        for (i in 3 downTo 1) {
+            setTrueForVipInstruction(UserModelFingerprint.instructionMatches[i], UserModelFingerprint)
+            setTrueForVipInstruction(
+                UserModelSerializableFingerprint.instructionMatches[i],
+                UserModelSerializableFingerprint
             )
         }
     }

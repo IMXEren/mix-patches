@@ -1,25 +1,32 @@
 package app.mix.patches.trakt
 
 import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.opcode
+import com.android.tools.smali.dexlib2.AccessFlags
+import com.android.tools.smali.dexlib2.Opcode
 
-internal val isVIPEPFingerprint = Fingerprint(
-    custom = { method, classDef ->
-        if (!classDef.endsWith("RemoteUser;")) return@Fingerprint false
+internal const val USER_MODEL_CLASS_TYPE = "Ltv/trakt/trakt/common/model/User;"
 
-        method.name == "isVIPEP_a"
-    }
+internal object UserModelFingerprint : Fingerprint(
+    definingClass = USER_MODEL_CLASS_TYPE,
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
+    returnType = "V",
+    filters = listOf(
+        opcode(Opcode.IPUT_BOOLEAN),
+        opcode(Opcode.IPUT_BOOLEAN),
+        opcode(Opcode.IPUT_BOOLEAN),
+        opcode(Opcode.IPUT_BOOLEAN),
+    )
 )
 
-internal val isVIPFingerprint = Fingerprint(
-    custom = { method, classDef ->
-        if (!classDef.endsWith("RemoteUser;")) return@Fingerprint false
-
-        method.name == "isVIP_a"
-    }
-)
-
-internal val remoteUserFingerprint = Fingerprint(
-    custom = { _, classDef ->
-        classDef.endsWith("RemoteUser;")
-    }
+internal object UserModelSerializableFingerprint : Fingerprint(
+    definingClass = USER_MODEL_CLASS_TYPE,
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.SYNTHETIC, AccessFlags.CONSTRUCTOR),
+    returnType = "V",
+    filters = listOf(
+        opcode(Opcode.IPUT_BOOLEAN),
+        opcode(Opcode.IPUT_BOOLEAN),
+        opcode(Opcode.IPUT_BOOLEAN),
+        opcode(Opcode.IPUT_BOOLEAN),
+    )
 )
