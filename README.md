@@ -5,7 +5,7 @@ Custom patches using Morphe. 'Mix' originates from Morphe + IMXEren (also, mixed
 # Patches
 
 - tv.trakt.trakt
-    - `Unlock pro` (`=2.2.1`)
+    - `Unlock pro` (`=3.4.1`)
 
 # Credits
 
