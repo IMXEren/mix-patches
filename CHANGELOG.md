@@ -1,3 +1,10 @@
+# [1.2.0-dev.1](https://github.com/IMXEren/mix-patches/compare/v1.1.0...v1.2.0-dev.1) (2026-03-30)
+
+
+### Features
+
+* **trakt:** add support for `3.4.1` ([1f91f1b](https://github.com/IMXEren/mix-patches/commit/1f91f1b5f22f3fb1d9507e91fe81ab83c358fe98))
+
 # [1.1.0](https://github.com/IMXEren/mix-patches/compare/v1.0.0...v1.1.0) (2026-03-26)
 
 
