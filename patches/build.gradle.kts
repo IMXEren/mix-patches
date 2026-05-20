@@ -14,7 +14,7 @@ patches {
 
 kotlin {
     compilerOptions {
-        freeCompilerArgs = listOf("-Xcontext-receivers")
+        freeCompilerArgs.add("-Xcontext-parameters")
     }
 }
 

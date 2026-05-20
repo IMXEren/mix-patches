@@ -1,5 +1,6 @@
 package app.mix.patches.trakt
 
+import app.mix.patches.trakt.shared.Constants.COMPATIBILITY_TRAKT
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.Match
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
@@ -11,7 +12,7 @@ val unlockProPatch = bytecodePatch(
     name = "Unlock pro",
     description = "Remove ads, add VIP badge and allow to view 'Your Month in Review'.",
 ) {
-    compatibleWith("tv.trakt.trakt"("3.4.1"))
+    compatibleWith(COMPATIBILITY_TRAKT)
 
     execute {
         // Set the User members isVip, isVipEp, isVipOg as true
