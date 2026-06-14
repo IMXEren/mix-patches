@@ -12,8 +12,8 @@ importers:
         specifier: git+https://github.com/MorpheApp/changelog.git#bundle
         version: https://codeload.github.com/MorpheApp/changelog/tar.gz/caa1e931730f097bb6c4dee636b01c2c24ccd72d(semantic-release@25.0.3)
       '@cleyrop-org/semantic-release-backmerge':
-        specifier: ^5.2.4
-        version: 5.2.4
+        specifier: ^6.0.0
+        version: 6.0.0(semantic-release@25.0.3)
       '@semantic-release/exec':
         specifier: ^7.1.0
         version: 7.1.0(semantic-release@25.0.3)
@@ -33,7 +33,7 @@ importers:
 packages:
 
   '@MorpheApp/changelog@https://codeload.github.com/MorpheApp/changelog/tar.gz/caa1e931730f097bb6c4dee636b01c2c24ccd72d':
-    resolution: {gitHosted: true, integrity: sha512-6NSPnspL1nq1//wBKUPe6zAf2lOWgXtURPNaMTwzHCXhLemVDmZKqexgZTR8g+mgH00ZqhKjGPzeF67kea0RMA==, tarball: https://codeload.github.com/MorpheApp/changelog/tar.gz/caa1e931730f097bb6c4dee636b01c2c24ccd72d}
+    resolution: {tarball: https://codeload.github.com/MorpheApp/changelog/tar.gz/caa1e931730f097bb6c4dee636b01c2c24ccd72d}
     version: 0.0.1
     engines: {node: '>=14.17'}
     peerDependencies:
@@ -59,8 +59,11 @@ packages:
     resolution: {integrity: sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q==}
     engines: {node: '>=6.9.0'}
 
-  '@cleyrop-org/semantic-release-backmerge@5.2.4':
-    resolution: {integrity: sha512-Bp+jjc2WSfvucaUNFNx+dj97bYKpUEv26VWmr0azNqp1SkLiT5cYAnwCNEw7BRO2aYIPXZa58lfiHdKKwtfk1Q==}
+  '@cleyrop-org/semantic-release-backmerge@6.0.0':
+    resolution: {integrity: sha512-EnBTKjR4xzStHMRh1cl9Y4svWlYDfLjiwv4iZ0qOZvWoaaPzjQE06gGbJBaqhTx3OsEtg66MMPt+f+WkEvouUw==}
+    engines: {node: ^22.14.0 || >=24.10.0}
+    peerDependencies:
+      semantic-release: '>=24'
 
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
@@ -1346,17 +1349,16 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.28.5': {}
 
-  '@cleyrop-org/semantic-release-backmerge@5.2.4':
+  '@cleyrop-org/semantic-release-backmerge@6.0.0(semantic-release@25.0.3)':
     dependencies:
-      '@semantic-release/error': 3.0.0
-      aggregate-error: 3.1.0
+      '@semantic-release/error': 4.0.0
+      aggregate-error: 5.0.0
       debug: 4.4.3
-      execa: 5.1.1
-      lodash: 4.17.21
+      execa: 9.6.1
+      lodash: 4.18.1
       semantic-release: 25.0.3
     transitivePeerDependencies:
       - supports-color
-      - typescript
 
   '@colors/colors@1.5.0':
     optional: true
