@@ -7,7 +7,22 @@ Custom patches using Morphe. 'Mix' originates from Morphe + IMXEren (also, mixed
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.2.0](https://github.com/IMXEren/mix-patches/releases/tag/v1.2.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+> **[v1.3.0-dev.1](https://github.com/IMXEren/mix-patches/releases/tag/v1.3.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+<details open>
+<summary>📦 Sync for Reddit&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<br>
+
+**🎯 Supported versions:**
+
+| v23.06.30-13:39 |
+| :---: |
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Fix Other discussions](#fix-other-discussions) | Fixes the 'Other discussions' tab showing '403 error loading page' by updating the API endpoint. |  |
+
+</details>
+
 <details open>
 <summary>📦 Trakt&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
