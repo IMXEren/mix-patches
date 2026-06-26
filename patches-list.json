@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.4.0-dev.1",
+  "version": "1.4.0",
   "patches": [
     {
       "name": "Fix Other discussions",
@@ -18,6 +18,7 @@
           "targets": [
             {
               "version": "v23.06.30-13:39",
+              "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
               "description": null
@@ -43,6 +44,7 @@
           "targets": [
             {
               "version": "3.13.0",
+              "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
               "description": null
