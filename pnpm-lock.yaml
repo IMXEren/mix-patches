@@ -12,8 +12,8 @@ importers:
         specifier: git+https://github.com/MorpheApp/changelog.git#bundle
         version: https://codeload.github.com/MorpheApp/changelog/tar.gz/caa1e931730f097bb6c4dee636b01c2c24ccd72d(semantic-release@25.0.5)
       '@cleyrop-org/semantic-release-backmerge':
-        specifier: ^6.0.0
-        version: 6.0.0(semantic-release@25.0.5)
+        specifier: ^6.1.0
+        version: 6.1.0(semantic-release@25.0.5)
       '@semantic-release/exec':
         specifier: ^7.1.0
         version: 7.1.0(semantic-release@25.0.5)
@@ -67,8 +67,8 @@ packages:
     resolution: {integrity: sha512-qehxGkRj55h/ff8EMaJ+cYhyaKlHIxqYDn682wQD7RNp9UujOQsHog2uS0r2vzr4pW+sXf90NeeayjcNaX3fFg==}
     engines: {node: '>=6.9.0'}
 
-  '@cleyrop-org/semantic-release-backmerge@6.0.0':
-    resolution: {integrity: sha512-EnBTKjR4xzStHMRh1cl9Y4svWlYDfLjiwv4iZ0qOZvWoaaPzjQE06gGbJBaqhTx3OsEtg66MMPt+f+WkEvouUw==}
+  '@cleyrop-org/semantic-release-backmerge@6.1.0':
+    resolution: {integrity: sha512-fbUFDC/cMZUYZ/ywOZXLpI3s9kcRy+eq8z3AUNvoNXmwg6vlzFFjeIr7ZT+7ZXQs1VXDVd8Qk8frTj6RxCu1eA==}
     engines: {node: ^22.14.0 || >=24.10.0}
     peerDependencies:
       semantic-release: '>=24'
@@ -1367,7 +1367,7 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.29.7': {}
 
-  '@cleyrop-org/semantic-release-backmerge@6.0.0(semantic-release@25.0.5)':
+  '@cleyrop-org/semantic-release-backmerge@6.1.0(semantic-release@25.0.5)':
     dependencies:
       '@semantic-release/error': 4.0.0
       aggregate-error: 5.0.0
